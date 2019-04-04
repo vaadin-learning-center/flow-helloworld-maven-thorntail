@@ -94,9 +94,9 @@ http://maven.apache.org/plugins/maven-deploy-plugin/
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <vaadin.version>10.0.9</vaadin.version>
-    <thorntail.version>2.3.0.Final</thorntail.version>
-    <rapidpm-logger-adapter.version>01.00.00-RPM</rapidpm-logger-adapter.version>
+    <vaadin.version>13.0.2</vaadin.version>
+    <thorntail.version>2.4.0.Final</thorntail.version>
+    <rapidpm-logger-adapter.version>01.00.01-RPM</rapidpm-logger-adapter.version>
 
     <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
   </properties>
