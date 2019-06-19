@@ -94,33 +94,83 @@ http://maven.apache.org/plugins/maven-deploy-plugin/
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <vaadin.version>13.0.2</vaadin.version>
+    <!--    <vaadin.version>13.0.2</vaadin.version>-->
+    <vaadin.version>14.0.0.beta3</vaadin.version>
     <thorntail.version>2.4.0.Final</thorntail.version>
     <rapidpm-logger-adapter.version>01.00.01-RPM</rapidpm-logger-adapter.version>
 
     <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
   </properties>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>vaadin-prereleases</id>
-      <url>https://maven.vaadin.com/vaadin-prereleases</url>
-    </pluginRepository>
-  </pluginRepositories>
-
   <repositories>
-    <!--Releases-->
     <repository>
-      <id>vaadin-addons</id>
+      <id>central</id>
+      <url>https://repo1.maven.org/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <!-- Repository used by many Vaadin add-ons -->
+    <repository>
+      <id>Vaadin Directory</id>
       <url>http://maven.vaadin.com/vaadin-addons</url>
     </repository>
-
-    <!--Pre-Releases-->
+    <!-- Repository needed for prerelease versions of Vaadin -->
     <repository>
-      <id>vaadin-prereleases</id>
-      <url>http://maven.vaadin.com/vaadin-prereleases</url>
+      <id>Vaadin - Prereleases</id>
+      <url>https://maven.vaadin.com/vaadin-prereleases</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </snapshots>
     </repository>
   </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <url>https://repo1.maven.org/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <!-- Repository needed for prerelease versions of Vaadin -->
+    <pluginRepository>
+      <id>Vaadin - Prereleases</id>
+      <url>https://maven.vaadin.com/vaadin-prereleases</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+
+    <pluginRepository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Maven Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 
 
   <dependencyManagement>
